@@ -1,7 +1,7 @@
 # myled_2020
 
 
-## フルカラーLEDで信号のピカピカを再現してみた
+## フルカラーLEDで信号のピカピカを再現
 
 - フルカラーLEDを使用し，緑色の点滅後に赤色に点灯
 
@@ -29,7 +29,7 @@
 
 ## 配線について
 以下の写真のように配線を行った．
-<img src = "./images/image1.jpg" width="500">
+<img src = "./images/imag1.jpeg" width="500">
 
 5mm 赤色LEDの各ピンとGPIOの接続先
 - 赤色LEDのアノードと抵抗を接続し，ジャンパー線を用いてGPIO25のピンに接続
@@ -49,9 +49,9 @@
 ## 具体的にどんな動作をするか
 
 '''
-make
-sudo insmod myled.ko
-sudo chmod 666
+$make
+$sudo insmod myled.ko
+$sudo chmod 666
 '''
 
 ## 動画説明
