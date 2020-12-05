@@ -20,16 +20,16 @@
 ## 回路図
 回路図は以下のようになります．
 
-<img src = "./images/5mmLED.jpg" width="500">
+<img src = "./images/5mmLED.png" width="500">
 図1　赤色LEDを点灯・点滅させるための回路
 
-<img src = "./images/RGBLED.jpg" width="500">
+<img src = "./images/RGBLED.png" width="500">
 
 図2　フルカラーLEDを点灯・点滅させるための回路
 
 ## 配線について
 以下の写真のように配線を行った．
-<img src = "./images/imag1.jpg" width="500">
+<img src = "./images/image1.jpg" width="500">
 
 5mm 赤色LEDの各ピンとGPIOの接続先
 - 赤色LEDのアノードと抵抗を接続し，ジャンパー線を用いてGPIO25のピンに接続
