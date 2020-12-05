@@ -18,7 +18,6 @@
 - カーボン抵抗器 75Ω(赤色LEDに使用) x1
 
 ## 回路図
-回路図は以下のようになります．
 
 <img src = "./images/5mmLED.png" width="500">
 図1　赤色LEDを点灯・点滅させるための回路
@@ -47,35 +46,42 @@
 
 ## プログラムの実行方法
 
-'''
+```
 $make
 $sudo insmod myled.ko
 $sudo chmod 666 /dev/myled0
 ...(作業後)
 $sudo rmmod myled
-'''
+```
 
 ## 動画説明
 
 - フルカラーLEDと5色LEDが交互に点滅する．
+```
 $echo 1 > /dev/myled0
+```
 
 - 5mm 赤色LEDが点滅する．
+```
 $echo 2 > /dev/myled0
+```
 
 - 信号の緑の点滅後、赤を点灯するイメージで製作した
 フルカラーLEDの緑色が点滅し，その後5mm 赤色LEDとともに赤色が点灯する
+```
 $echo 3 > /dev/myled0
+```
 
 - フルカラーLEDと5色LEDが消灯する．
+```
 $echo 0 > /dev/myled0
+```
 
 - フルカラーLEDを使用し，8色に順に点灯
 点灯順は，消灯→赤→緑→黄色→青→ピンク→水色→白
 LED拡散キャップを装着することで発光が綺麗に見える．
 今回使用するフルカラーLEDは、共通カソードのものであるためGPIOがHighの時に点灯する．
-$echo 4 > /dev/myled0
-
+```$echo 4 > /dev/myled0```
 
 ## デモ動画
 https://youtu.be/ObT22L09GHY
