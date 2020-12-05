@@ -1,3 +1,8 @@
+// SPDX-License-Identifier: GPL-3.0
+/*
+      Copyright (C) 2020 Yuka Matsuura and Ryuichi Ueda. All right reserved.
+*/
+
 #include <linux/module.h> 
 #include <linux/fs.h>
 #include <linux/cdev.h>
@@ -6,8 +11,7 @@
 #include <linux/io.h>
 #include <linux/delay.h>
 
-
-MODULE_AUTHOR("Ryuich Ueda &Yuka Matsuura");
+MODULE_AUTHOR("Ryuich Ueda & Yuka Matsuura");
 MODULE_DESCRIPTION("driver for LED control");
 MODULE_LICENSE("GPL");
 MODULE_VERSION("0.0.1");
@@ -116,7 +120,9 @@ static ssize_t led_write(struct file* filp, const char* buf, size_t count, loff_
 			
 			//yellow
 			gpio_base[7] = 1<<4;
-			gpio_base[10] = 1<<22;                                                                           gpio_base[7] = 1<<23;                                                                            msleep(500);
+			gpio_base[10] = 1<<22; 
+			gpio_base[7] = 1<<23; 
+			msleep(500);
 			
 			//green
 			gpio_base[10] = 1<<4;
